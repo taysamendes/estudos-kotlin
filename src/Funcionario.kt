@@ -5,5 +5,9 @@ abstract class Funcionario(
     cpf: String,
     val salario: Double
 ):Pessoa(nome, cpf){
-    protected abstract fun calcAuxilio();
+    protected abstract fun calcAuxilio():Double;
+
+    override fun toString(): String {
+        return "Nome do funcionário: $nome\nAuxílio: ${calcAuxilio()}"
+    }
 }
